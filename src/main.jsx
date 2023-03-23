@@ -8,6 +8,14 @@ import Login from "./screens/login/Login";
 
 const router = createBrowserRouter([
   {
+    path: "/",
+    element: (
+      <div>
+        <h1>Earthquake</h1>
+      </div>
+    ),
+  },
+  {
     path: "login",
     element: <Login />,
   },
