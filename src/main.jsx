@@ -4,7 +4,9 @@ import App from "./App";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import Login from "./screens/login/Login";
+import SigninContainer from "./screens/signin/SigninContainer";
+import Login from "./screens/signin/Login";
+import Signup from "./screens/signin/Signup";
 
 const router = createBrowserRouter([
   {
@@ -12,8 +14,18 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "login",
-    element: <Login />,
+    path: "/account",
+    element: <SigninContainer />,
+    children: [
+      {
+        path: "login",
+        element: <Login />,
+      },
+      {
+        path: "signup",
+        element: <Signup />,
+      },
+    ],
   },
 ]);
 

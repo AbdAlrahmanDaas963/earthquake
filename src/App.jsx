@@ -1,10 +1,10 @@
-import Login from "./screens/login/Login";
 import "./App.css";
+import Landing from "./screens/Landing/Landing";
 
 function App() {
   return (
     <div className="App">
-      <Login />
+      <Landing />
     </div>
   );
 }
