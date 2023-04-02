@@ -32,6 +32,9 @@ function Header() {
           <Button color="inherit">
             <Link to={"/account/signup"}>Signup</Link>
           </Button>
+          <Button color="inherit">
+            <Link to={"/feeds"}>Feeds</Link>
+          </Button>
         </Toolbar>
       </AppBar>
     </Box>

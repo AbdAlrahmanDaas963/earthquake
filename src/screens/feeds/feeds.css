@@ -1,0 +1,8 @@
+.post {
+  border: 1px dotted blue;
+  padding: 10px;
+  border-radius: 16px;
+  width: 350px;
+  height: fit-content;
+  margin-top: 25px;
+}
