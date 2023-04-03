@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Box, Stack } from "@mui/material";
+import { Box, Paper, Stack } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import Button from "@mui/material/Button";
@@ -10,7 +10,11 @@ import ArrowCircleDownIcon from "@mui/icons-material/ArrowCircleDown";
 
 function Post({ name, title, time, content, votes, btn }) {
   return (
-    <Stack className="post" gap={"10px"}>
+    <Stack
+      className="post"
+      gap={"10px"}
+      sx={{ backgroundColor: "background.paper" }}
+    >
       <Stack
         direction={"row"}
         alignItems={"center"}
@@ -29,7 +33,7 @@ function Post({ name, title, time, content, votes, btn }) {
         </Box>
       </Stack>
 
-      <Stack>{content}</Stack>
+      <Stack textAlign={"left"}>{content}</Stack>
 
       <Stack
         direction={"row"}
@@ -39,9 +43,9 @@ function Post({ name, title, time, content, votes, btn }) {
         <Box display={"flex"} flexDirection={"row"} alignItems={"center"}>
           <ArrowCircleUpIcon htmlColor="green" />
           <Box marginX={"5px"}>{votes}</Box>
-          <ArrowCircleDownIcon htmlColor="red" />
+          <ArrowCircleDownIcon htmlColor="red" sx={{ color: "error.main" }} />
         </Box>
-        <Button variant="outlined" startIcon={<Info />}>
+        <Button variant="contained" color="error" startIcon={<Info />}>
           {btn}
         </Button>
       </Stack>
