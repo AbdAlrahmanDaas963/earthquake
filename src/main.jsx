@@ -27,6 +27,19 @@ let theme = createTheme({
     },
     background: {
       paper: "#EDCBC9",
+      paper2: "#470200",
+      dim: "#47020099",
+    },
+  },
+  typography: {
+    h2: {
+      fontSize: 17,
+      color: "#240100",
+      fontWeight: "bold",
+    },
+    h6: {
+      fontSize: 13,
+      color: "#624A49",
     },
   },
 });

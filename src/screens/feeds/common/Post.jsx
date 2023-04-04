@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Box, Paper, Stack } from "@mui/material";
+import { Box, Paper, Stack, Typography } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import Button from "@mui/material/Button";
@@ -12,7 +12,7 @@ function Post({ name, title, time, content, votes, btn }) {
   return (
     <Stack
       className="post"
-      gap={"10px"}
+      gap={"15px"}
       sx={{ backgroundColor: "background.paper" }}
     >
       <Stack
@@ -22,15 +22,24 @@ function Post({ name, title, time, content, votes, btn }) {
       >
         <Stack direction={"row"} alignItems={"center"}>
           <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-          <Box>
-            <div>{name}</div>
-            <div>{title}</div>
+          <Box
+            display={"flex"}
+            alignItems={"flex-start"}
+            flexDirection={"column"}
+            sx={{ marginLeft: "10px" }}
+          >
+            <Typography variant="h2">{name}</Typography>
+            <Typography variant="h6">{title}</Typography>
           </Box>
         </Stack>
-        <Box display={"flex"} flexDirection={"row"} alignItems={"center"}>
-          <AccessTimeIcon />
-          <div>{time}</div>
-        </Box>
+        <Typography
+          variant="h6"
+          display={"flex"}
+          flexDirection={"row"}
+          alignItems={"center"}
+        >
+          <AccessTimeIcon fontSize="small" /> {time}
+        </Typography>
       </Stack>
 
       <Stack textAlign={"left"}>{content}</Stack>

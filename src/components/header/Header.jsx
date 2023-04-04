@@ -1,5 +1,6 @@
 import React from "react";
 
+import { Paper } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -12,7 +13,7 @@ import { Link } from "react-router-dom";
 function Header() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="static" sx={{ backgroundColor: "background.paper2" }}>
         <Toolbar>
           <IconButton
             size="large"
@@ -23,7 +24,7 @@ function Header() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
             Earthquake
           </Typography>
           <Button color="inherit">
